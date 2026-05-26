@@ -216,7 +216,7 @@ const sectionMotion = {
 
 };
 
-const isMobile = window.innerWidth < 768;
+
 
 function MediaBlock({ src, minHeight = "240px", dim = false }) {
   const isVideo =
