@@ -421,7 +421,7 @@ function Home() {
           style={{
             minHeight: "100vh",
             display: "grid",
-            gridTemplateColumns: "1.05fr .95fr",
+            gridTemplateColumns:window.innerWidth < 768 ? "1fr" : "1.05fr .95fr",
             gap: "50px",
             alignItems: "center",
             padding: "90px 80px",
@@ -473,7 +473,10 @@ function Home() {
             </div>
           </div>
 
-          <MediaBlock src="/images/karina-real.jpg" minHeight="680px" />
+<MediaBlock
+  src="/images/karina-real.jpg"
+  minHeight={window.innerWidth < 768 ? "420px" : "680px"}
+/>
         </motion.section>
 
         <motion.section {...sectionMotion} style={{ padding: "70px 80px" }}>
@@ -482,7 +485,8 @@ function Home() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1.05fr .95fr",
+gridTemplateColumns:
+  window.innerWidth < 768 ? "1fr" : "1.05fr .95fr",
               gap: "40px",
               alignItems: "center",
             }}
