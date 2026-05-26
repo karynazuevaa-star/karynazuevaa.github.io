@@ -2244,6 +2244,70 @@ html {
     height: auto !important;
   }
 }
+  @media (max-width: 768px) {
+  main {
+    overflow-x: hidden;
+  }
+
+  main section {
+    padding: 44px 20px !important;
+  }
+
+  h1 {
+    font-size: 54px !important;
+    line-height: 0.95 !important;
+  }
+
+  h2,
+  .sectionTitle {
+    font-size: 36px !important;
+  }
+
+  h3 {
+    font-size: 28px !important;
+  }
+
+  p {
+    font-size: 16px !important;
+  }
+
+  .eyebrow {
+    font-size: 11px !important;
+    letter-spacing: 3px !important;
+  }
+
+  div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  video,
+  img {
+    max-width: 100% !important;
+  }
+
+  a {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  main section {
+    padding: 36px 16px !important;
+  }
+
+  h1 {
+    font-size: 44px !important;
+  }
+
+  .sectionTitle {
+    font-size: 32px !important;
+  }
+
+  button,
+  a {
+    font-size: 14px !important;
+  }
+}
 `;
 
 export default function App() {
