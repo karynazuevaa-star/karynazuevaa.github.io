@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Link, useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-
+const isMobile = window.innerWidth < 768;
 const projects = [
   {
     slug: "vbt",
@@ -430,6 +430,7 @@ function Home() {
             display: "grid",
             gridTemplateColumns:window.innerWidth < 768 ? "1fr" : "1.05fr .95fr",
             gap: "50px",
+            width: "100%",
             alignItems: "center",
             padding: "90px 80px",
           }}
@@ -496,6 +497,7 @@ gridTemplateColumns:
   window.innerWidth < 768 ? "1fr" : "1.05fr .95fr",
               gap: "40px",
               alignItems: "center",
+              width: "100%",
             }}
           >
             <div>
@@ -518,6 +520,7 @@ gridTemplateColumns:
               display: "grid",
               gridTemplateColumns: "1.15fr .85fr",
               gap: "22px",
+              width: "100%",
               marginTop: "56px",
             }}
           >
@@ -532,6 +535,7 @@ gridTemplateColumns:
                     gridTemplateColumns: "145px 1fr",
                     gap: "20px",
                     padding: "15px 0",
+                    width: "100%",
                     borderTop: `1px solid ${colors.border}`,
                   }}
                 >
@@ -563,7 +567,7 @@ gridTemplateColumns:
               ))}
             </motion.div>
 
-            <div style={{ display: "grid", gap: "22px" }}>
+            <div style={{ display: "grid", width: "100%", gap: "22px" }}>
               <motion.div whileHover={{ y: -4 }} style={card}>
                 <h3 style={{ fontSize: "26px", marginBottom: "14px" }}>
                   Work Experience
@@ -576,6 +580,7 @@ gridTemplateColumns:
                       display: "grid",
                       gridTemplateColumns: "120px 1fr",
                       gap: "14px",
+                      width: "100%",
                       padding: "12px 0",
                       borderTop: `1px solid ${colors.border}`,
                     }}
@@ -618,6 +623,7 @@ gridTemplateColumns:
                 display: "grid",
                 gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
                 gap: "18px",
+                width: "100%",
                 alignItems: "stretch",
               }}
             >
@@ -635,7 +641,7 @@ gridTemplateColumns:
             Methods & Tools
           </h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "18px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr 1fr",  width: "100%", gap: "18px" }}>
             {skillGroups.map((group) => (
               <motion.div whileHover={{ y: -4 }} key={group.title} style={card}>
                 <h3 style={{ fontSize: "22px", marginBottom: "16px" }}>
@@ -674,6 +680,7 @@ function StudyFlow({ title, steps }) {
           display: "grid",
           gridTemplateColumns: isMobile ? "1fr" : "1fr 60px 1fr 60px 1fr",
           alignItems: "center",
+          width: "100%",
           gap: "10px",
         }}
       >
@@ -817,7 +824,7 @@ function LonelinessProject() {
         <div style={{ ...card, maxWidth: "100%", marginBottom: "28px" }}>
           <h2 style={{ fontSize: "30px", marginTop: 0 }}>Study Design</h2>
 
-          <div style={{ display: "grid", gap: "18px", marginTop: "24px" }}>
+          <div style={{ display: "grid", gap: "18px", width: "100%", marginTop: "24px" }}>
             <StudyFlow
               title="Experimental group"
               steps={[
@@ -837,7 +844,7 @@ function LonelinessProject() {
         <div style={{ ...card, maxWidth: "100%", marginBottom: "28px" }}>
           <h2 style={{ fontSize: "30px", marginTop: 0 }}>Results</h2>
 
-          <div style={{ display: "grid", gap: "18px", marginTop: "22px" }}>
+          <div style={{ display: "grid", gap: "18px", width: "100%", marginTop: "22px" }}>
             <ResultCard
               title="Immediate effect"
               value="−0.715, p = .010"
@@ -1018,9 +1025,10 @@ function VBTProject() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
+            gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr 1fr",
             gap: "20px",
             marginBottom: "28px",
+            width: "100%",
           }}
         >
           <div
@@ -1156,6 +1164,7 @@ function VBTProject() {
               display: "grid",
               gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
               gap: "24px",
+              width: "100%",
               marginTop: "24px",
             }}
           >
@@ -1306,7 +1315,7 @@ function VRSchoolProject() {
         <div style={{ ...card, marginBottom: "28px" }}>
           <h2 style={{ fontSize: "30px", marginTop: 0 }}>Program Structure</h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "16px", marginTop: "20px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr 1fr", gap: "16px",  width: "100%", marginTop: "20px" }}>
             <ResultCard title="Total program" value="10 sessions" text="Psychologist-guided VR intervention." />
             <ResultCard title="MVP" value="6 sessions" text="Minimum viable version of the program." />
             <ResultCard title="Session length" value="40 min" text="Each session includes one cognitive and one social block." />
@@ -1653,6 +1662,7 @@ function CourseProject() {
               gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
               gap: "16px",
               marginTop: "20px",
+              width: "100%",
             }}
           >
             <ResultCard
@@ -1738,6 +1748,7 @@ function JourneyBlock() {
         style={{
           display: "grid",
           gap: "14px",
+          width: "100%",
           marginTop: "28px",
         }}
       >
@@ -1795,6 +1806,7 @@ function MenuBlock() {
         style={{
           display: "grid",
           gap: "16px",
+          width: "100%",
           marginTop: "28px",
         }}
       >
@@ -1948,6 +1960,7 @@ function BotProject() {
             display: "grid",
             gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
             gap: "24px",
+            width: "100%",
             marginBottom: "28px",
           }}
         >
@@ -1974,8 +1987,9 @@ function BotProject() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
+              gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
               gap: "18px",
+              width: "100%",
               marginTop: "24px",
             }}
           >
@@ -2008,8 +2022,9 @@ function BotProject() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
+            gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr 1fr",
             gap: "20px",
+            width: "100%",
             marginBottom: "28px",
           }}
         >
