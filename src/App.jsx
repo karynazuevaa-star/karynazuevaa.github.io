@@ -205,11 +205,18 @@ const buttonSecondary = {
 };
 
 const sectionMotion = {
+
   initial: { opacity: 0, y: 40 },
+
   whileInView: { opacity: 1, y: 0 },
+
   viewport: { once: true, amount: 0.12 },
+
   transition: { duration: 0.8 },
+
 };
+
+const isMobile = window.innerWidth < 768;
 
 function MediaBlock({ src, minHeight = "240px", dim = false }) {
   const isVideo =
@@ -609,7 +616,7 @@ gridTemplateColumns:
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "1fr 1fr",
+                gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
                 gap: "18px",
                 alignItems: "stretch",
               }}
@@ -665,7 +672,7 @@ function StudyFlow({ title, steps }) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr 60px 1fr 60px 1fr",
+          gridTemplateColumns: isMobile ? "1fr" : "1fr 60px 1fr 60px 1fr",
           alignItems: "center",
           gap: "10px",
         }}
@@ -1147,7 +1154,7 @@ function VBTProject() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1fr 1fr",
+              gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
               gap: "24px",
               marginTop: "24px",
             }}
@@ -1257,7 +1264,7 @@ function VRSchoolProject() {
           </p>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "28px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: "24px", marginBottom: "28px" }}>
           <FigureBlock title="Virtual mentor interaction" src="/images/school1.png" caption="Scenario-based interaction between a child and a virtual mentor." />
           <FigureBlock title="School adaptation environment" src="/images/school2.png" caption="VR environment for practicing school-related social situations." />
         </div>
@@ -1627,7 +1634,7 @@ function CourseProject() {
         <div style={{ ...card, marginBottom: "28px" }}>
           <h2 style={{ fontSize: "30px", marginTop: 0 }}>What Was Developed</h2>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginTop: "20px" }}>
+          <div style={{ display: "grid",gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: "16px", marginTop: "20px" }}>
             <ResultCard
               title="Video content"
               value="5 lessons"
@@ -1919,7 +1926,7 @@ function BotProject() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
             gap: "24px",
             marginBottom: "28px",
           }}
