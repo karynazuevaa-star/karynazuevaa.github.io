@@ -1639,8 +1639,20 @@ function CourseProject() {
           </p>
 
           <div style={{ marginTop: "22px" }}>
-            <MediaBlock src="/gifs/course_ai.MOV" minHeight={isMobile ? "260px" : "420px"} dim />
-          </div>
+  <MediaBlock src="/gifs/course_ai.MOV" minHeight={isMobile ? "260px" : "420px"} dim />
+
+  <p
+    style={{
+      marginTop: "12px",
+      color: colors.muted,
+      fontSize: isMobile ? "13px" : "14px",
+      lineHeight: 1.5,
+      fontStyle: "italic",
+    }}
+  >
+    *Demonstration video generated for portfolio presentation, as the original version was in Russian.
+  </p>
+</div>
         </div>
 
         <div style={{ ...card, marginBottom: "24px", padding: isMobile ? "20px" : "24px" }}>
