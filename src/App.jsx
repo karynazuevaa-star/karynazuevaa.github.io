@@ -1026,7 +1026,7 @@ function VBTProject() {
           style={{
             display: "grid",
             gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr 1fr",
-            gap: "20px",
+            gap: isMobile ? "14px" : "20px",
             marginBottom: "28px",
             width: "100%",
           }}
@@ -1053,8 +1053,8 @@ function VBTProject() {
               src="/images/innercritic.png"
               alt=""
               style={{
-                width: "100%",
-                maxHeight: "420px",
+                width: isMobile ? "120px" : "100%",
+                maxHeight: isMobile ? "160px" : "420px",
                 objectFit: "contain",
                 position: "relative",
                 zIndex: 1,
@@ -1062,7 +1062,14 @@ function VBTProject() {
               }}
             />
 
-            <h3 style={{ fontSize: "26px", marginBottom: "8px" }}>
+            <h3
+  style={{
+    fontSize: isMobile ? "28px" : "42px",
+    lineHeight: 1.1,
+    wordBreak: "break-word",
+    marginBottom: "18px",
+  }}
+>
               Inner Critic
             </h3>
 
@@ -1103,7 +1110,14 @@ function VBTProject() {
               }}
             />
 
-            <h3 style={{ fontSize: "26px", marginBottom: "8px" }}>
+            <h3
+  style={{
+    fontSize: isMobile ? "28px" : "42px",
+    lineHeight: 1.1,
+    wordBreak: "break-word",
+    marginBottom: "18px",
+  }}
+>
               Inner Child
             </h3>
 
@@ -1143,7 +1157,14 @@ function VBTProject() {
               }}
             />
 
-            <h3 style={{ fontSize: "26px", marginBottom: "8px" }}>
+            <h3
+  style={{
+    fontSize: isMobile ? "28px" : "42px",
+    lineHeight: 1.1,
+    wordBreak: "break-word",
+    marginBottom: "18px",
+  }}
+>
               Inner Protector
             </h3>
 
