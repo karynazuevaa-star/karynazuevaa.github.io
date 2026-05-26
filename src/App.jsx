@@ -23,7 +23,7 @@ const projects = [
     year: "2025 — now",
     title: "Human–AI Interaction and Loneliness",
     role: "Researcher",
-    meta: ["N = 22", "30-day study", "MixedLM"],
+    meta: ["Human–AI Interaction", "Statistical Methods", "30-day study", "MixedLM"],
     visual: "/gifs/Ai_mp4.MOV",
     problem:
       "AI companions are increasingly used for emotional communication, but their effects on loneliness remain unclear.",
@@ -53,7 +53,7 @@ const projects = [
     year: "2023",
     title: "Bot-Psychologist for Teenagers",
     role: "Product Owner",
-    meta: ["500+ users", "7 emotions", "CBT / DBT / ACT"],
+    meta: ["500+ users", "117 commands", "CBT / DBT / ACT"],
     image: "/images/bot.png",
     problem:
       "Teenagers may need immediate psychological support, but access to professional help is often limited.",
