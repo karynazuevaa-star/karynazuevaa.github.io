@@ -1552,18 +1552,32 @@ function CourseProject() {
         background: colors.bg,
         color: colors.text,
         minHeight: "100vh",
-        padding: "70px 80px",
+        padding: isMobile ? "42px 18px" : "70px 80px",
         fontFamily: "Inter, Arial, sans-serif",
+        overflowX: "hidden",
       }}
     >
       <Link to="/" style={{ color: colors.soft, textDecoration: "none" }}>
         ← Back
       </Link>
 
-      <section style={{ maxWidth: "1180px", margin: "60px auto 0" }}>
+      <section
+        style={{
+          maxWidth: "1180px",
+          width: "100%",
+          margin: isMobile ? "42px auto 0" : "60px auto 0",
+        }}
+      >
         <p className="eyebrow">Digital Psychoeducation · 2024</p>
 
-        <h1 style={{ fontSize: "76px", lineHeight: 1, margin: "18px 0 24px" }}>
+        <h1
+          style={{
+            fontSize: isMobile ? "42px" : "76px",
+            lineHeight: 1,
+            margin: "18px 0 24px",
+            letterSpacing: "-0.04em",
+          }}
+        >
           AI Avatar-Based Psychoeducation Course
         </h1>
 
@@ -1575,35 +1589,34 @@ function CourseProject() {
           ))}
         </div>
 
-        <div style={{ ...card, marginBottom: "28px" }}>
-          <h2 style={{ fontSize: "30px", marginTop: 0 }}>Objective</h2>
-
-          <p style={{ fontSize: "19px", lineHeight: 1.75, color: colors.soft }}>
+        <div style={{ ...card, marginBottom: "24px", padding: isMobile ? "20px" : "24px" }}>
+          <h2 style={{ fontSize: isMobile ? "28px" : "30px", marginTop: 0 }}>Objective</h2>
+          <p style={{ fontSize: isMobile ? "16px" : "19px", lineHeight: 1.65, color: colors.soft }}>
             Create a short digital psychoeducational material to introduce clients
             to Cognitive Behavioral Therapy (CBT) in a clear, accessible, and
             visually engaging format.
           </p>
         </div>
 
-        <div style={{ ...card, marginBottom: "28px" }}>
-          <h2 style={{ fontSize: "30px", marginTop: 0 }}>Project Format</h2>
+        <div style={{ ...card, marginBottom: "24px", padding: isMobile ? "20px" : "24px" }}>
+          <h2 style={{ fontSize: isMobile ? "28px" : "30px", marginTop: 0 }}>Project Format</h2>
 
-          <p style={{ fontSize: "19px", lineHeight: 1.75, color: colors.soft }}>
+          <p style={{ fontSize: isMobile ? "16px" : "19px", lineHeight: 1.65, color: colors.soft }}>
             The project was designed as a compact online course consisting of
             five short video lessons and accompanying written materials. The
             content was presented on a website and guided users step by step
             through the basic model and principles of Cognitive Behavioral Therapy.
           </p>
 
-          <div style={{ marginTop: "26px" }}>
-            <MediaBlock src="/gifs/course_ai.MOV" minHeight="420px" dim />
+          <div style={{ marginTop: "22px" }}>
+            <MediaBlock src="/gifs/course_ai.MOV" minHeight={isMobile ? "260px" : "420px"} dim />
           </div>
         </div>
 
-        <div style={{ ...card, marginBottom: "28px" }}>
-          <h2 style={{ fontSize: "30px", marginTop: 0 }}>Tasks</h2>
+        <div style={{ ...card, marginBottom: "24px", padding: isMobile ? "20px" : "24px" }}>
+          <h2 style={{ fontSize: isMobile ? "28px" : "30px", marginTop: 0 }}>Tasks</h2>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px", marginTop: "20px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "10px", marginTop: "18px" }}>
             {[
               "Write scripts for video clips",
               "Prepare accompanying materials",
@@ -1619,10 +1632,10 @@ function CourseProject() {
           </div>
         </div>
 
-        <div style={{ ...card, marginBottom: "28px" }}>
-          <h2 style={{ fontSize: "30px", marginTop: 0 }}>Course Logic</h2>
+        <div style={{ ...card, marginBottom: "24px", padding: isMobile ? "20px" : "24px" }}>
+          <h2 style={{ fontSize: isMobile ? "28px" : "30px", marginTop: 0 }}>Course Logic</h2>
 
-          <p style={{ fontSize: "19px", lineHeight: 1.75, color: colors.soft }}>
+          <p style={{ fontSize: isMobile ? "16px" : "19px", lineHeight: 1.65, color: colors.soft }}>
             The course explains CBT as a structured way of understanding the
             connection between thoughts, emotions, behavior, and reactions. The
             materials were organized so that users could gradually move from a
@@ -1631,10 +1644,17 @@ function CourseProject() {
           </p>
         </div>
 
-        <div style={{ ...card, marginBottom: "28px" }}>
-          <h2 style={{ fontSize: "30px", marginTop: 0 }}>What Was Developed</h2>
+        <div style={{ ...card, marginBottom: "24px", padding: isMobile ? "20px" : "24px" }}>
+          <h2 style={{ fontSize: isMobile ? "28px" : "30px", marginTop: 0 }}>What Was Developed</h2>
 
-          <div style={{ display: "grid",gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr", gap: "16px", marginTop: "20px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: isMobile ? "1fr" : "1fr 1fr",
+              gap: "16px",
+              marginTop: "20px",
+            }}
+          >
             <ResultCard
               title="Video content"
               value="5 lessons"
@@ -1661,10 +1681,10 @@ function CourseProject() {
           </div>
         </div>
 
-        <div style={{ ...card }}>
-          <h2 style={{ fontSize: "30px", marginTop: 0 }}>Outcome</h2>
+        <div style={{ ...card, padding: isMobile ? "20px" : "24px" }}>
+          <h2 style={{ fontSize: isMobile ? "28px" : "30px", marginTop: 0 }}>Outcome</h2>
 
-          <p style={{ fontSize: "19px", lineHeight: 1.75, color: colors.soft }}>
+          <p style={{ fontSize: isMobile ? "16px" : "19px", lineHeight: 1.65, color: colors.soft }}>
             The result was a structured psychoeducational mini-course with five
             video lessons, written materials, and a website presentation that
             introduced users to the foundations of CBT in a simple and accessible
